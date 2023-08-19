@@ -1,0 +1,118 @@
+<?php
+
+/**
+ * @file
+ * Ads Catalan Countries and regions to Backdrop's countries list.
+ */
+
+/**
+ * Implements hook_countries_alter()
+ *
+ * @param array $countries
+ * @return void
+ */
+function catalan_countries_countries_alter(&$countries) {
+  $countries['CT'] = t('Catalan Countries');
+}
+
+/**
+ * Implements hook_addressfield_address_formats_alter()
+ *
+ * @param array $address_formats
+ * @return void
+ */
+function catalan_countries_addressfield_address_formats_alter(&$address_formats) {
+  $address_formats['CT'] = array(
+    'used_fields' => array('locality', 'administrative_area', 'postal_code'),
+    'required_fields' => array('locality', 'administrative_area', 'postal_code'),
+    'administrative_area_label' => t('Region', array(), array('context' => 'Catalan region: Comarca')),
+    'render_administrative_area_value' => TRUE,
+  );
+}
+
+/**
+ * Implements hook_addressfield_administrative_areas_alter()
+ *
+ * @param array $administrative_areas
+ * @return void
+ */
+function catalan_countries_addressfield_administrative_areas_alter(&$administrative_areas) {
+  $administrative_areas['CT'] = array(
+    0 => 'Alguer',
+    1 => 'Alta Cerdanya',
+    2 => 'Alta Ribagorça',
+    3 => 'Alt Camp',
+    4 => 'Alt Empordà',
+    5 => 'Alt Maestrat',
+    6 => 'Alt Penedès',
+    7 => 'Alt Urgell',
+    8 => 'Alcalatén',
+    9 => 'Alcoià',
+    10 => 'Anoia',
+    11 => 'Bages',
+    12 => 'Baix Camp',
+    13 => 'Baix Cinca',
+    14 => 'Baix Ebre',
+    15 => 'Baix Empordà',
+    16 => 'Baix Llobregat',
+    17 => 'Baix Maestrat',
+    18 => 'Baix Millars',
+    19 => 'Baix Penedès',
+    20 => 'Baixa Ribagorça',
+    21 => 'Barcelonès',
+    22 => 'Berguedà',
+    23 => 'Capcir',
+    24 => 'Camp de Morvedre',
+    25 => 'Camp de Túria',
+    26 => 'Canal de Navarrés',
+    27 => 'Conca de Barberà',
+    28 => 'Conflent',
+    29 => 'Costera',
+    30 => 'Eivissa',
+    31 => 'Fenolleda',
+    32 => 'Formentera',
+    33 => 'Garraf',
+    34 => 'Garrigues',
+    35 => 'Gironès',
+    36 => 'Horta',
+    37 => 'L\'Horta Nord',
+    38 => 'L\'Horta Oest',
+    39 => 'L\'Horta Sud',
+    40 => 'La Marina Alta',
+    41 => 'La Marina Baixa',
+    42 => 'La Plana Alta',
+    43 => 'La Plana Baixa',
+    44 => 'La Ribera Alta',
+    45 => 'La Ribera Baixa',
+    46 => 'La Safor',
+    47 => 'La Selva',
+    48 => 'La Vall d\'Albaida',
+    49 => 'Llitera',
+    50 => 'Mallorca',
+    51 => 'Maresme',
+    52 => 'Matarranya',
+    53 => 'Menorca',
+    54 => 'Noguera',
+    55 => 'Osona',
+    56 => 'Pallars Jussà',
+    57 => 'Pallars Sobirà',
+    58 => 'Palància',
+    59 => 'Pla d\'Urgell',
+    60 => 'Pla de l\'Estany',
+    61 => 'Priorat',
+    62 => 'Ribera d\'Ebre',
+    63 => 'Ripollès',
+    64 => 'Rosselló',
+    65 => 'Segarra',
+    66 => 'Segrià',
+    67 => 'Solsonès',
+    68 => 'Tarragonès',
+    69 => 'Terra Alta',
+    70 => 'Urgell',
+    71 => 'Val d\'Aran',
+    72 => 'Vallespir',
+    73 => 'Vallès Occidental',
+    74 => 'Vallès Oriental',
+    75 => 'Vinalopó'
+  );
+}

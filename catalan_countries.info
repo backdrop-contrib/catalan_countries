@@ -1,0 +1,5 @@
+type = module
+name = Catalan Countries
+description = Adds Catalan Countries to Backdrop's Countries list. If addressfield is installed, it also adds their &quot;Comarques&quot; (regions) and address format.
+backdrop = 1.x
+package = Fields
