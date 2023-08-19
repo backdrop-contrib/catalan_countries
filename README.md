@@ -1,7 +1,7 @@
 Catalan Countries
 =================
 
-Provides a Catalan Countries entry on the Backdrop's countries list. If Addressfield is installed, it also add their "Comarques" (regions) and address format.
+Provides a Catalan Countries entry on the Backdrop's countries list. If Addressfield is installed, it also adds their "Comarques" (regions) and address format.
 
 
 Installation
